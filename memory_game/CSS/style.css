@@ -1,0 +1,89 @@
+body {
+text-align: center;
+margin:0;
+}
+header{
+	background-color:#f15B31;
+	padding:30px 20px;
+}
+nav{
+	background-color:#00A6B3;
+	padding:20px;
+}
+main{
+	width:850px;
+	margin:35px auto;
+}
+
+h1 {
+	font-family: Raleway;
+	text-transform: uppercase; /*this wasn't in the instructions, but the example screenshots are in uppercase*/
+	font-color: #0D2C40;
+	letter-spacing: 1px;
+	font-weight: 400;
+	font-size: 45px;
+	margin:0;
+}
+
+h2 {
+	font-family: Raleway;
+	text-transform: uppercase; /*this wasn't in the instructions, but the example screenshots are in uppercase*/
+	color: #0D2C40;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+p {
+	font-family: "Droid Serif";
+	line-height: 26px;
+	font-size: 18px;
+}
+
+
+img{
+	margin:40px 8px 0 8px;
+}
+a {
+	font-family: Raleway;
+	text-transform: uppercase;/*this wasn't in the instructions, but the example screenshots are in uppercase*/
+	color: white; /* instructions had us use #F15B31; but the example screenshots have the link font as white*/
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 18px;
+	text-decoration: none;
+	margin: 0 20px;
+	border-bottom:2px solid transparent;
+}
+a:hover{
+	border-color:white;
+}
+.copyright{
+	font-family: "Raleway";
+	float:left;
+}
+.message{
+	font-family: "Raleway";
+	float:right;
+}
+footer{
+	text-transform: uppercase;
+	padding:20px;
+	background-color: #0D2C40;
+	color:white;
+	font-size: 14px;
+	letter-spacing: .08em;
+	font-weight: 500;
+}
+.clearfix:after {
+visibility: hidden;
+display: block;
+content: " ";
+clear: both;
+height: 0;
+font-size: 0;
+}
+.name{
+	color: #F15B31;
+	font-weight: 700;
+}
