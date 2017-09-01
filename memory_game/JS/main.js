@@ -1,5 +1,4 @@
 console.log("Up and running!");
-
 var cards = [
 {
 	rank: "queen",
@@ -19,7 +18,7 @@ var cards = [
 {
 	rank: "king",
 	suit: "diamonds",
-	cardImage: "images/king-of-diamonds"
+	cardImage: "images/king-of-diamonds.png"
 }
 ];
 var cardsInPlay = [];
@@ -29,17 +28,41 @@ var checkForMatch = function(){
 		}else{
 		alert("Sorry, try again.");
 		}
-}
-var flipCard = function (cardId){
+};
+var flipCard = function (){
+	var cardId = this.getAttribute('data-id');
 	console.log("User flipped " + cards[cardId].rank);
-	cardsInPlay.push(cards[cardId].rank);
-	console.log(cards[cardId].cardImage);
 	console.log(cards[cardId].suit);
+	this.setAttribute('src', cards[cardId].cardImage);
 
+	cardsInPlay.push(cards[cardId].rank);
 	if (cardsInPlay.length === 2){
 		checkForMatch();
-	}
-}
+		}
+};
 
-flipCard(0);
-flipCard(2);
+var createBoard = function(){
+	for (var i=0; i<cards.length; i++){
+		var cardElement = document.createElement('img');
+		cardElement.setAttribute('src', "images/back.png");
+		cardElement.setAttribute('data-id', i);
+		cardElement.addEventListener('click', flipCard);
+		document.getElementById('game-board').appendChild(cardElement);
+
+	};
+};
+createBoard();
+resetBoard = function(){
+	console.log('user reset the board');
+	for (var i=0; i<cards.length; i++){
+		document.getElementsByTagName('img')[i].setAttribute('src', "images/back.png");
+		//need to reset cardsInPlay array too.
+	}
+};
+var resetButtonActivate = function(){
+		var resetButton = document.getElementById('resetbutton');
+		resetButton.addEventListener('click', resetBoard);
+		console.log('reset button is active');
+	}
+
+resetButtonActivate();
