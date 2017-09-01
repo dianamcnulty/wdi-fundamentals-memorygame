@@ -56,7 +56,7 @@ resetBoard = function(){
 	console.log('user reset the board');
 	for (var i=0; i<cards.length; i++){
 		document.getElementsByTagName('img')[i].setAttribute('src', "images/back.png");
-		//need to reset cardsInPlay array too.
+		cardsInPlay=[];
 	}
 };
 var resetButtonActivate = function(){
