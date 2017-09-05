@@ -22,11 +22,17 @@ var cards = [
 }
 ];
 var cardsInPlay = [];
+var matchesMade = 0;
+var noMatch = 0;
 var checkForMatch = function(){
 	if (cardsInPlay[0]=== cardsInPlay[1]){
 		alert("You found a match!");
+		matchesMade ++;
+		document.getElementById('wins').innerHTML= matchesMade;
 		}else{
 		alert("Sorry, try again.");
+		document.getElementById('losses').innerHTML= noMatch;
+		noMatch ++;
 		}
 };
 var flipCard = function (){
